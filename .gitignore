@@ -1,0 +1,13 @@
+C++/**/*.exe
+C++/**/bin
+
+C/**/*.exe
+C/**/bin
+
+.vscode
+
+C#/**/bin
+C#/**/obj
+
+Blind75/bin
+Blind75/*.exe
