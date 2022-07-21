@@ -9,18 +9,15 @@ public:
     bool containsDuplicate(vector<int>& nums) {
         map<int, int> seen;
 
-        bool isDuplicate = false;
-
-        for(int i =0; i< nums.size(); i ++)
+        for each(int val in nums)
         {
-            int val = nums[i];
-            
-            if( !seen.count(val) )
-                seen[nums[i]] = val;
+            if (!seen.count(val))
+                seen[val] = 1;
             else
-                isDuplicate = true;       
+                return false;
         }
-        return isDuplicate;
+
+        return true;
     }
 };
 
