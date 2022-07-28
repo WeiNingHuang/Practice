@@ -16,13 +16,24 @@ class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         pass
 #%%
-nums = [1,1,1,2,2,3]
+nums = [8,8,8,6,6,6,5]
 k = 2
 
-freq = [ [] ] * len(nums)
+freq = [ [] for i in range(len(nums) + 1) ] 
+
+count = {}
 
 for i in nums:
-    num = nums.count(i)
-    print(num)
+    count[i] = 1+count.get(i, 0)
 
-    freq[num].append(i)
+for k, v in count.items():
+    freq[v].append(k)
+
+res = []
+
+for i in range(len(nums) - 1 ,0, -1):
+    for n in freq[i]:
+        res.append(n)
+        if len(res) ==k:
+            print(res)
+            break
