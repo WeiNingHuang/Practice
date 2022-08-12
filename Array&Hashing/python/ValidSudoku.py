@@ -32,4 +32,21 @@ board = [["5","3",".",".","7",".",".",".","."]
         ,[".",".",".","4","1","9",".",".","5"]
         ,[".",".",".",".","8",".",".","7","9"]]
 
+row = {}
+col = [[str(i)] for i in range(1,10)]
+sqr = [[str(i)] for i in range(1,10)]
 
+for i in range(len(row)):
+    row = [[] for _ in range(1,10)]
+    for j in board[i]:
+        if int(j) not in row:
+            row[int(j)].append(i)
+
+for j in board[0]:
+	if j == ".":
+		continue
+
+	if j not in row:
+		row[j] = 1
+	else:
+		row[j] += 1
