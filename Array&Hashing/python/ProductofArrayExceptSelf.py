@@ -12,4 +12,9 @@ from typing import List
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         pass
+    
+nums = [1,2,3,4,5]
+
+res = [1] * len(nums)
+res
 
