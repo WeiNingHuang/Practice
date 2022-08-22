@@ -12,24 +12,30 @@ public:
         int l = 0;
         int r = s.size() - 1;
 
-        while( l <= r )
+        while( l < r )
         {
-            if( s[l] == s[r])
+            while( isalnum( s[l] ) && l < r)
             {
                 l ++;
+            }
+
+            while ( isalnum( s[r] ) && l < r)
+            {
                 r --;
             }
-            
+
+            if (tolower(s[l] != tolower(s[r])))
+            {
+                return false;
+            }
+
+            l++;
+            r--;
         }
+
+        return true;
     }
 };
 
-int main()
-{
-    vector<int> v = {1,2,3,4,5};
 
-    for(int i : v )
-    {
-        cout << i << endl;
-    }
-}
+
