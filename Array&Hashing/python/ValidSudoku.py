@@ -21,32 +21,44 @@ Input: board =
 ,[".",".",".",".","8",".",".","7","9"]]
 Output: true
 """
-
+##
 board = [["5","3",".",".","7",".",".",".","."]
         ,["6",".",".","1","9","5",".",".","."]
         ,[".","9","8",".",".",".",".","6","."]
         ,["8",".",".",".","6",".",".",".","3"]
-        ,["4",".",".","8",".","3",".",".","1"]
+        ,["7",".",".","8",".","3",".",".","1"]
         ,["7",".",".",".","2",".",".",".","6"]
         ,[".","6",".",".",".",".","2","8","."]
         ,[".",".",".","4","1","9",".",".","5"]
         ,[".",".",".",".","8",".",".","7","9"]]
 
-row = {}
-col = [[str(i)] for i in range(1,10)]
-sqr = [[str(i)] for i in range(1,10)]
+for r in board:
+    # row = {}
+    # for i in r:
+    #     if i == ".":
+    #         continue
+    #     if i not in row:
+    #         row[i] = 1
+    #     else:
+    #         print("row false")
+    col = {}
+    for j in range(len(board)):
+        for c in r[j]:
+            if c == ".":
+                continue
 
-for i in range(len(row)):
-    row = [[] for _ in range(1,10)]
-    for j in board[i]:
-        if int(j) not in row:
-            row[int(j)].append(i)
+            if c not in col:
+                col[c] = 1
+            else:
+                print("col false")
+# [row[0] for row in board]
+##
 
-for j in board[0]:
-	if j == ".":
-		continue
+for r in board:
+    for j in range(len(board)):
+        for c in r[j]:
+            print(c)
 
-	if j not in row:
-		row[j] = 1
-	else:
-		row[j] += 1
+r=board[0]
+
+[row[0] for row in board]
