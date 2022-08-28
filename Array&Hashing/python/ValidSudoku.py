@@ -32,33 +32,15 @@ board = [["5","3",".",".","7",".",".",".","."]
         ,[".",".",".","4","1","9",".",".","5"]
         ,[".",".",".",".","8",".",".","7","9"]]
 
-for r in board:
-    # row = {}
-    # for i in r:
-    #     if i == ".":
-    #         continue
-    #     if i not in row:
-    #         row[i] = 1
-    #     else:
-    #         print("row false")
-    col = {}
-    for j in range(len(board)):
-        for c in r[j]:
-            if c == ".":
-                continue
-
-            if c not in col:
-                col[c] = 1
-            else:
-                print("col false")
-# [row[0] for row in board]
-##
 
 for r in board:
-    for j in range(len(board)):
-        for c in r[j]:
-            print(c)
-
-r=board[0]
-
-[row[0] for row in board]
+    row = {}
+    for i in r:
+        if i == ".":
+            continue
+        if i not in row:
+            row[i] = 1
+        else:
+            print("row false")
+    
+    
