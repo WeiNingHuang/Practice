@@ -33,20 +33,33 @@ board = [["5","5",".",".","7",".",".",".","."]
         ,[".",".",".","4","1","9",".",".","5"]
         ,[".",".",".",".","8",".",".","7","9"]]
 
-row = defaultdict(list)
-sqr = defaultdict(list)
-col = defaultdict(list)
+for r in board:
+    # row = {}
+    # for i in r:
+    #     if i == ".":
+    #         continue
+    #     if i not in row:
+    #         row[i] = 1
+    #     else:
+    #         print("row false")
+    col = {}
+    for j in range(len(board)):
+        for c in r[j]:
+            if c == ".":
+                continue
 
-for r in range(len(board)):
-    for c in range(len(board)):
-        num = board[r][c]
-        if num =='.':
-            continue 
-        
-        if (num in row[r] or num in col[c] or num in sqr[(r//3, c//3)]):
-            print(False)
-        else:
-            row[r].append(num)
-            col[c].append(num)
-            sqr[(r//3, c//3)].append(num)
-                
+            if c not in col:
+                col[c] = 1
+            else:
+                print("col false")
+# [row[0] for row in board]
+##
+
+for r in board:
+    for j in range(len(board)):
+        for c in r[j]:
+            print(c)
+
+r=board[0]
+
+[row[0] for row in board]
