@@ -37,16 +37,18 @@ row = defaultdict(list)
 sqr = defaultdict(list)
 col = defaultdict(list)
 
-for r in range(len(board)):
-    for c in range(len(board)):
-        num = board[r][c]
-        if num =='.':
-            continue 
-        
-        if (num in row[r] or num in col[c] or num in sqr[(r//3, c//3)]):
-            print(False)
-        else:
-            row[r].append(num)
-            col[c].append(num)
-            sqr[(r//3, c//3)].append(num)
+class Solution:
+    def ValidSudoku():
+        for r in range(len(board)):
+            for c in range(len(board)):
+                num = board[r][c]
+                if num =='.':
+                    continue 
                 
+                if (num in row[r] or num in col[c] or num in sqr[(r//3, c//3)]):
+                    return False
+                else:
+                    row[r].append(num)
+                    col[c].append(num)
+                    sqr[(r//3, c//3)].append(num)
+        return True        
