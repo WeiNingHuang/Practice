@@ -31,7 +31,7 @@ public:
 int main()
 {
     vector<int> nums = {2,7,11,15};
-    int target = 18;
+    int target = 13;
     
     Solution s;
     
