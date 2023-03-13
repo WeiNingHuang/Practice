@@ -28,26 +28,21 @@ from typing import List
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
 
-        #initial
-        left = 0
-        right = len(nums)-1
-
         left_sum = 0
         right_sum = 0
         
-        for i in range(1, len(nums)):
+        for i in range(len(nums)):
             right_sum += nums[i]
-        #===========
 
-        while left <= right:
-            if left_sum == right_sum:
-                return left
-            else:
-                left_sum += nums[left]
-                right_sum -= (nums[left+1])
+        for index, value in enumerate(nums):
+            right_sum -= value
             
-            left += 1
+            if left_sum == right_sum:
+                return index
+            
+            left_sum += value
         return -1
+
 
 
 lst = [1,2,3]
