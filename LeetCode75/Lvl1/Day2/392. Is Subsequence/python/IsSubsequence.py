@@ -31,9 +31,3 @@ for i in t:
     if i == cur:
         left += 1
         cur = s[left]
-
-    
-####testtestest
-for i in range(10):
-    print(i)
-
