@@ -33,6 +33,6 @@ for i in t:
         cur = s[left]
 
     
-
+####testtestest
 
 
