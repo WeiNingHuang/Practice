@@ -34,5 +34,6 @@ for i in t:
 
     
 
-
+for i in range(10):
+    print(i)
 
