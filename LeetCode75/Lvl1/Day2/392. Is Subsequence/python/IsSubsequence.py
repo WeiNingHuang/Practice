@@ -33,7 +33,7 @@ for i in t:
         cur = s[left]
 
     
-
+####testtestest
 for i in range(10):
     print(i)
 
