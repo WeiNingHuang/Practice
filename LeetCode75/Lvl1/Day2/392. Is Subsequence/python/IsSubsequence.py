@@ -13,21 +13,28 @@ Output: false"""
 
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        pass
+        left = 0
+       
+        for i in t:
+            cur = s[left:]  
+            if len(cur) == 0:
+                return True
+            
+            if i == cur[0]:
+                left += 1
+
+        if len(cur) == 0:
+            return True        
+        else:
+            return False
 
 
 
 ##
-s = 'abc'
-t = 'ahbgdc'
+s = 'c'
+t = 'abc'
+
+a = Solution()
+a.isSubsequence(s, t)
 
 
-left = 0
-right = len(s) -1
-
-for i in t:
-    cur = s[left]
-
-    if i == cur:
-        left += 1
-        cur = s[left]
