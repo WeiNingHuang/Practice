@@ -25,17 +25,7 @@ class ListNode:
         self.next = next
 
 
-class SingleLinkedList:
-
-    def __init__(self, head=0, tail=None): 
-        self.head = head
-        self.tail = tail
-        return
-
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         pass
 ##
-
-
-
