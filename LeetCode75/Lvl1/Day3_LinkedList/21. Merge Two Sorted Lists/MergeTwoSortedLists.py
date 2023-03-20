@@ -25,37 +25,26 @@ class ListNode:
         self.next = next
 
 
-class SingleLinkedList:
-    def __init__(self, head=None):
-        self.head = head
-
-    def append(self, data):
-        if not self.head:
-            self.head = ListNode(data)
-            return
-        
-        current = self.head
-        
-        while current.next:
-            current = current.next
-        current.next = ListNode(data)
-
-
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         pass
 ##
+node1 = ListNode(1)
+node2 = ListNode(2)
+node3 = ListNode(3)
 
-ll = SingleLinkedList()
+node1.next = node2
+node2.next = node3
 
-a = [1,2,3,4]
-
-for i in a:
-    ll.append(i)
-
-cur = ll.head
-
+list1 = node1
 ##
-while cur:
-    print(cur.val, end='->')
-    cur = cur.next
+node1 = ListNode(1)
+node2 = ListNode(2)
+node3 = ListNode(4)
+
+node1.next = node2
+node2.next = node3
+
+list2 = node1
+##
+
