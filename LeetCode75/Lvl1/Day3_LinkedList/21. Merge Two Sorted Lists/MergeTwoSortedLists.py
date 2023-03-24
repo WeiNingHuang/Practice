@@ -27,7 +27,13 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        pass
+        
+        cur = ListNode()
+        temp = ListNode()
+
+        l1 = list1
+        l2 = list2
+        
 ##
 node1 = ListNode(1)
 node2 = ListNode(2)
