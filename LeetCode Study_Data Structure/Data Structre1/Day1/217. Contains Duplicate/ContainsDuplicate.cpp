@@ -24,14 +24,30 @@ public:
     bool containsDuplicate(vector<int>& nums) {
         map<int, int> mp;
 
-        for(int i=0; i<nums.size();i++){
-            cout<< nums[i] << endl;
+        // for(int i=0; i<nums.size();i++){
+        //     cout<< nums[i] << endl;
+        // }
+
+        // new way iterate for vector
+        for( int i: nums)
+        {
+            if(mp.find(i) == mp.end()){
+                mp[i] = 1;
+            }
+            else{
+                return true;
+            }
         }
-        
-        return true;
+        return false;
     }
 };
 
 int main(){
+    vector<int> test = vector{1,2,3,1};
+    Solution s = Solution();
+
+    bool res = s.containsDuplicate(test);
+
+    cout << res;
     return 0;
 }
