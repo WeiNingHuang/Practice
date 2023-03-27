@@ -24,14 +24,8 @@ using namespace std;
 
 class Solution {
 public:
-    bool containsDuplicate(vector<int>& nums) {
-        vector<int, int> map;
-
-        for(int i =0; i < nums.size(); i++){
-            if(nums[i]){
-
-            }
-        }
+    int maxSubArray(vector<int>& nums) {
+        
     }
 };
 
