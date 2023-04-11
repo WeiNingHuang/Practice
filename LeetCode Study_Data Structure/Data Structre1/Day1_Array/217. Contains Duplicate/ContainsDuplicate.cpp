@@ -43,7 +43,7 @@ public:
 };
 
 int main(){
-    vector<int> test = vector{1,2,3,1};
+    vector<int> test = vector{1,2,3,2};
     Solution s = Solution();
 
     bool res = s.containsDuplicate(test);

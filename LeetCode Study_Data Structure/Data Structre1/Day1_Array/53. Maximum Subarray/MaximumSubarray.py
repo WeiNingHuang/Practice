@@ -5,9 +5,14 @@ import math
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         
-        total = 0
-        
+        cur_max = 0
+        max_till_now = -math.inf
 
+        for i in nums:
+            cur_max = max(i, cur_max+i)
+            max_till_now = max(cur_max, max_till_now)
+
+        return max_till_now
         
 
 ##
