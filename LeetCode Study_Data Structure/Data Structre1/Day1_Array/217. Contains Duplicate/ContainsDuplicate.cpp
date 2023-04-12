@@ -29,8 +29,7 @@ public:
         // }
 
         // new way iterate for vector
-        for( int i: nums)
-        {
+        for( int i: nums){
             if(mp.find(i) == mp.end()){
                 mp[i] = 1;
             }
