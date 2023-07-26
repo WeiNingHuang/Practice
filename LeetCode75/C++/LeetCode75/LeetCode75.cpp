@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iterator>
-#include "Array_String.h"
+#include "Array_String.cpp"
 
 
 using namespace std;
