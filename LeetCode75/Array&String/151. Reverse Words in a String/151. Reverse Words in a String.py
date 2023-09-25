@@ -57,3 +57,9 @@ new_s = ""
 for i in s_lst:
     if i != "":
         new_s = new_s.join(i)
+        
+
+## 
+text = "  hello    world  "
+s = Solution()
+s.reverseWords(text)
